@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36616.10 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TK_PiT_523_Glushkov", "TK_PiT_523_Glushkov.csproj", "{01497F5A-D543-496E-95BF-60CCA68A0D00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "..\UnitTestProject1\UnitTestProject1.csproj", "{EA3EB119-4EF2-4557-A416-995C4A485325}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{01497F5A-D543-496E-95BF-60CCA68A0D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01497F5A-D543-496E-95BF-60CCA68A0D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01497F5A-D543-496E-95BF-60CCA68A0D00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA3EB119-4EF2-4557-A416-995C4A485325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA3EB119-4EF2-4557-A416-995C4A485325}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA3EB119-4EF2-4557-A416-995C4A485325}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA3EB119-4EF2-4557-A416-995C4A485325}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

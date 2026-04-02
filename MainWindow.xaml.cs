@@ -25,7 +25,11 @@ namespace TK_PiT_523_Glushkov
             InitializeComponent();
 
         }
-
+        /// <summary>
+        /// Проверка значений на валидность, и вызов функции по подсчету в зависимости от выбранного типа уравнения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BTans_Click(object sender, RoutedEventArgs e)
         {
             if (RBlin.IsChecked == true) 
@@ -36,8 +40,20 @@ namespace TK_PiT_523_Glushkov
                     double b;
                     if (Double.TryParse(TBa.Text, out a) && Double.TryParse(TBb.Text, out b))
                     {
-                        double ans = Calcus_Lin(a, b);
-                        TBans.Text = ans.ToString();
+                        if (a == 0 && b == 0)
+                        {
+                            TBans.Text = ("x = всему");
+                        }
+                        else if (a == 0)
+                        {
+                            TBans.Text = ("Решения нет");
+                        }
+                        else
+                        {
+                            double ans = Calcus_Lin(a, b);
+
+                            TBans.Text = ans.ToString();
+                        }
                     }
                     else
                     {
@@ -75,6 +91,11 @@ namespace TK_PiT_523_Glushkov
             }
         }
 
+        /// <summary>
+        /// Вывод скрытого textbox для квадратного уравнения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RBlin_Click(object sender, RoutedEventArgs e)
         {
             LabC.Visibility = Visibility.Hidden;
@@ -87,12 +108,25 @@ namespace TK_PiT_523_Glushkov
             TBc.Visibility = Visibility.Visible;
         }
 
+        /// <summary>
+        /// Подсчет линейного уравнения
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public double Calcus_Lin(double a, double b)
         {
             double x = (-b) / a;
             return x;
         }
 
+        /// <summary>
+        /// Подчсет квадратного уравнения
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <returns></returns>
         public string Calcus_Square(double a, double b, double c)
         {
             double d = Math.Pow(b, 2) - (4 * a * c);
